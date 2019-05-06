@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://learningsparql.com/ns/addressbook#">
+
+  <rdf:Property rdf:about="http://learningsparql.com/ns/addressbook#usesSocialMedia">
+    <rdfs:comment>Identifies the Social Media that someone uses</rdfs:comment>
+    <rdfs:label>uses Social Media</rdfs:label>
+    <rdfs:domain rdf:resource="http://learningsparql.com/ns/addressbook#SocialMediaUser"/>
+    <rdfs:range rdf:resource="http://learningsparql.com/ns/addressbook#SocialMedia"/>
+  </rdf:Property>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#sm001">
+    <ns0:name>FaceBook</ns0:name>
+    <ns0:url rdf:resource="https://facebook.com"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#sm002">
+    <ns0:name>Instagram</ns0:name>
+    <ns0:url rdf:resource="https://www.instagram.com/"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#sm003">
+    <ns0:name>Twitter</ns0:name>
+    <ns0:url rdf:resource="https://twitter.com"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#sm004">
+    <ns0:name>Line</ns0:name>
+    <ns0:url>Tidak ada</ns0:url>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#001">
+    <ns0:firstName>Fadhilah</ns0:firstName>
+    <ns0:lastName>Muhammad</ns0:lastName>
+    <ns0:status>In a relationship</ns0:status>
+    <ns0:university>Universitas Padjadjaran</ns0:university>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm001"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm002"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm003"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm004"/>
+    <ns0:fbFriends rdf:resource="http://learningsparql.com/ns/data#002"/>
+    <ns0:igFollowers rdf:resource="http://learningsparql.com/ns/data#002"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#002">
+    <ns0:firstName>Novita</ns0:firstName>
+    <ns0:lastName>Ritonga</ns0:lastName>
+    <ns0:status>Single</ns0:status>
+    <ns0:university>Universitas Diponegoro</ns0:university>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm001"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm002"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm003"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm004"/>
+    <ns0:fbFriends rdf:resource="http://learningsparql.com/ns/data#001"/>
+    <ns0:igFollowers rdf:resource="http://learningsparql.com/ns/data#001"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#003">
+    <ns0:firstName>Rigel</ns0:firstName>
+    <ns0:lastName>Ardana</ns0:lastName>
+    <ns0:status>Single</ns0:status>
+    <ns0:university>Sekolah Tinggi Akuntansi Negara</ns0:university>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm001"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm002"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm003"/>
+    <ns0:fbFriends rdf:resource="http://learningsparql.com/ns/data#003"/>
+    <ns0:igFollowers rdf:resource="http://learningsparql.com/ns/data#003"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://learningsparql.com/ns/data#004">
+    <ns0:firstName>Amalia</ns0:firstName>
+    <ns0:lastName>Rachmah</ns0:lastName>
+    <ns0:status>Single</ns0:status>
+    <ns0:university>Institut Teknologi Bandung</ns0:university>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm001"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm002"/>
+    <ns0:usesSocialMedia rdf:resource="http://learningsparql.com/ns/data#sm003"/>
+    <ns0:fbFriends rdf:resource="http://learningsparql.com/ns/data#004"/>
+    <ns0:igFollowers rdf:resource="http://learningsparql.com/ns/data#004"/>
+  </rdf:Description>
+
+</rdf:RDF>

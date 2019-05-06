@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org.1999/02/22-rdf-syntax-ns#"
+    xmlns:rdf="http://xmlns.com/foaf/0.1/"
+    xmlns:cnn="https://cnnindonesia.com/nasional/20190311223731-12-376352/polisi-ciduk-pemasok-sabu-mantan-finalis-indonesian-idol"
+    xmlns:loc="https://www.cnnindonesia.com/">
+
+    <rdf:Description rdf:about="polisi-ciduk-pemasok-sabu-mantan-finalis-indonesian-idol">
+        <foaf:location rdf:resource="loc:nasional">
+        <foaf:title>Polisi Ciduk Pemasok Sabu Manatan Finalis Indonesian Idol</foaf:title>
+        <foaf:author>Patricia Diah Ayo Saraswati</foaf:author>
+        <foaf:city>Jakarta</foaf:city>
+        <foaf:intials>ERM</foaf:intials>
+    </rdf:Description>
+
+</rdf:RDF>

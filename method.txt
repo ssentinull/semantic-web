@@ -1,0 +1,16 @@
+Domain : Teknik Informatika (education)	Competency Questions
+1.	Siapa kaprodi?
+2.	Apa saja mata kuliah?
+3.	Berapa banyak mahasiswa aktif?
+4.	Siapa saja dosennya?
+5.	Apa saja fasilitas pendukung pembelajaran?
+6.	Apa akreditasi Informatika?
+7.	Berapa sks sampai lulus?
+
+Terms :	
+1.	Universitas
+2.	Semester
+3.	Matakuliah
+4.	Program
+5.	Dosen
+6.	Mahasiswa 

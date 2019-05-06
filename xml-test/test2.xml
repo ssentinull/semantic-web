@@ -1,0 +1,20 @@
+<?xml versionn="1.0" encoding="UTF-8">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.example.org/Schema" 
+    xmlns:tns="http://www.example.org/Schema" 
+    elementFormDefault="qualified">
+
+    <complexType name="tipekategori">
+        <sequence>
+            <element name="barang" type="tns:tipebarang">
+        </sequence>
+    </complexType>
+
+    <complexType name="tipebarang">
+        <sequence>
+            <element name="nama" type="string">
+            <element name="harga" type="integer">
+        </sequence>
+        <attribute name="bid" type="ID" use="required"></attribute>
+    </complexType>
+</schema>

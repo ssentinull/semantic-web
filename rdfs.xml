@@ -1,0 +1,55 @@
+# Prefixes
+@prefix ab: <http://learningsparql.com/ns/addressbook#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+# Predicates
+ab:developsWebApp
+    rdf:type rdf:Property;
+    rdf:comment "Web as the platform of choice."@en-Us;
+    rdfs:label "develops Web applications."@en-US;
+    rdfs:domain rdfs:webDeveloper;
+    rdfs:range rdfs:programmingLanguage.
+
+ab:developsMobileApp
+    rdf:type rdf:Property;
+    rdf:comment "Mobile as the platform of choice."@en-Us;
+    rdfs:label "develops Mobile application."@en-US;
+    rdfs:domain rdfs:mobileDeveloper;
+    rdfs:range rdfs:programmingLanguage.
+
+# Objects
+ab:p001
+    ab:name "Php";
+    ab:creator "Rasmus Lerdorf";
+    ab:year 1994;
+    ab:framework "Laravel", "CodeIgniter".
+
+ab:p002
+    ab:name "JavaScript";
+    ab:creator "Brendan Eich";
+    ab:year 1995;
+    ab:framework "ReactJs", "VueJs".
+
+ab:p003
+    ab:name "NodeJs";
+    ab:creator "Ryan Dahl";
+    ab:year 2009;
+    ab:framework "Express".
+
+# Subjects
+ab:i001
+    ab:firstName "Wold";
+    ab:lastName "Hello";
+    ab:address "Jakarta";
+    ab:semester 6;
+    ab:developsWebApp ab:p001;
+    ab:developsWebApp ab:p003. 
+
+ab:i002
+    ab:firstName "Hello";
+    ab:lastName "World";
+    ab:address "Bandung";
+    ab:semester 4;
+    ab:developsMobileApp ab:p002. 

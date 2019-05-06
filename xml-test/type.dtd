@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!ELEMENT komodit (barang)>
+    <!ELEMENT barang (nama, harga)>
+    <!ELEMENT nama (#PCDATA)>
+    <!ELEMENT harga (#PCDATA)>
+    <!ATTLIST barang bid ID #REQUIRED>
+    <!ATTLIST jenis (sayur|buah|daging) "sayur">

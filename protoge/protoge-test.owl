@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#studies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#first_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#last_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#lecturerId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#lecturerId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#studentId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#studentId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Semantic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Semantic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Web -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Web">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+        <teaches rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT01"/>
+        <teaches rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT02"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</last_name>
+        <lecturerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">001</lecturerId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+        <teaches rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB01"/>
+        <teaches rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB02"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tan</last_name>
+        <lecturerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">002</lecturerId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Semantic"/>
+        <studies rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+        <studies rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT01"/>
+        <studies rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB02"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford</last_name>
+        <studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</studentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+        <studies rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#SMT01"/>
+        <studies rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB01"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billy</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batson</last_name>
+        <studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</studentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#WEB02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Lecturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Semantic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Student"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-2#Web"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

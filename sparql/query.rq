@@ -1,0 +1,21 @@
+# SELECT ?x
+# WHERE { ?x  <http://www.w3.org/2001/vcard-rdf/3.0#FN>  "John Smith" }
+
+# SELECT ?x ?fname
+# WHERE {?x  <http://www.w3.org/2001/vcard-rdf/3.0#FN>  ?fname}
+
+# SELECT ?givenName
+# WHERE
+#   { 
+#     ?y  <http://www.w3.org/2001/vcard-rdf/3.0#Family>  "Smith" .
+#     ?y  <http://www.w3.org/2001/vcard-rdf/3.0#Given>  ?givenName .
+#   }
+
+PREFIX vcard:      <http://www.w3.org/2001/vcard-rdf/3.0#>
+
+SELECT ?givenName
+WHERE
+  {
+    ?y vcard:Family "Smith" .
+    ?y vcard:Given  ?givenName .
+  }

@@ -1,0 +1,318 @@
+@prefix : <http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-4: <http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#> .
+@base <http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4> .
+
+<http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#accountOf
+untitled-ontology-4:accountOf rdf:type owl:ObjectProperty ;
+                              rdfs:domain untitled-ontology-4:FacebookAccount ,
+                                          untitled-ontology-4:InstagramAccount ,
+                                          untitled-ontology-4:TwitterAccount ;
+                              rdfs:range untitled-ontology-4:SocialMedia .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#follows
+untitled-ontology-4:follows rdf:type owl:ObjectProperty ;
+                            rdfs:domain untitled-ontology-4:FacebookAccount ,
+                                        untitled-ontology-4:InstagramAccount ,
+                                        untitled-ontology-4:TwitterAccount ;
+                            rdfs:range untitled-ontology-4:FacebookAccount ,
+                                       untitled-ontology-4:InstagramAccount ,
+                                       untitled-ontology-4:TwitterAccount .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#has
+untitled-ontology-4:has rdf:type owl:ObjectProperty ;
+                        rdfs:domain untitled-ontology-4:Person ;
+                        rdfs:range untitled-ontology-4:FacebookAccount ,
+                                   untitled-ontology-4:InstagramAccount ,
+                                   untitled-ontology-4:TwitterAccount .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#first_name
+untitled-ontology-4:first_name rdf:type owl:DatatypeProperty ;
+                               rdfs:domain untitled-ontology-4:Person ;
+                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#friends_followers
+untitled-ontology-4:friends_followers rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain untitled-ontology-4:FacebookAccount ,
+                                                  untitled-ontology-4:InstagramAccount ,
+                                                  untitled-ontology-4:TwitterAccount ;
+                                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#last_name
+untitled-ontology-4:last_name rdf:type owl:DatatypeProperty ;
+                              rdfs:domain untitled-ontology-4:Person ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#name
+untitled-ontology-4:name rdf:type owl:DatatypeProperty ;
+                         rdfs:domain untitled-ontology-4:SocialMedia ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#person_id
+untitled-ontology-4:person_id rdf:type owl:DatatypeProperty ;
+                              rdfs:domain untitled-ontology-4:Person ;
+                              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#social_media_account_id
+untitled-ontology-4:social_media_account_id rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain untitled-ontology-4:FacebookAccount ,
+                                                        untitled-ontology-4:InstagramAccount ,
+                                                        untitled-ontology-4:TwitterAccount ;
+                                            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#social_media_id
+untitled-ontology-4:social_media_id rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain untitled-ontology-4:SocialMedia ;
+                                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#status
+untitled-ontology-4:status rdf:type owl:DatatypeProperty ;
+                           rdfs:domain untitled-ontology-4:Person ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#university
+untitled-ontology-4:university rdf:type owl:DatatypeProperty ;
+                               rdfs:domain untitled-ontology-4:Person ;
+                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#username
+untitled-ontology-4:username rdf:type owl:DatatypeProperty ;
+                             rdfs:domain untitled-ontology-4:FacebookAccount ,
+                                         untitled-ontology-4:InstagramAccount ,
+                                         untitled-ontology-4:TwitterAccount ;
+                             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#Account
+untitled-ontology-4:Account rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#FacebookAccount
+untitled-ontology-4:FacebookAccount rdf:type owl:Class ;
+                                    rdfs:subClassOf untitled-ontology-4:Account .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#InstagramAccount
+untitled-ontology-4:InstagramAccount rdf:type owl:Class ;
+                                     rdfs:subClassOf untitled-ontology-4:Account .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#Person
+untitled-ontology-4:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#SocialMedia
+untitled-ontology-4:SocialMedia rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#TwitterAccount
+untitled-ontology-4:TwitterAccount rdf:type owl:Class ;
+                                   rdfs:subClassOf untitled-ontology-4:Account .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#AmeliaRachmah
+untitled-ontology-4:AmeliaRachmah rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-4:Person ;
+                                  untitled-ontology-4:has untitled-ontology-4:FacebookAccountAmelia ,
+                                                          untitled-ontology-4:InstagramAccountAmelia ;
+                                  untitled-ontology-4:first_name "Amelia"^^xsd:string ;
+                                  untitled-ontology-4:last_name "Rachmah"^^xsd:string ;
+                                  untitled-ontology-4:person_id 004 ;
+                                  untitled-ontology-4:status "Single"^^xsd:string ;
+                                  untitled-ontology-4:university "Institut Teknologi Bandung"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#Facebook
+untitled-ontology-4:Facebook rdf:type owl:NamedIndividual ,
+                                      untitled-ontology-4:SocialMedia ;
+                             untitled-ontology-4:name "Facebook"^^xsd:string ;
+                             untitled-ontology-4:social_media_id 010 .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#FacebookAccountAmelia
+untitled-ontology-4:FacebookAccountAmelia rdf:type owl:NamedIndividual ,
+                                                   untitled-ontology-4:FacebookAccount ;
+                                          untitled-ontology-4:accountOf untitled-ontology-4:Facebook ;
+                                          untitled-ontology-4:follows untitled-ontology-4:FacebookAccountRigel ;
+                                          untitled-ontology-4:friends_followers 710 ;
+                                          untitled-ontology-4:social_media_account_id 014 ;
+                                          untitled-ontology-4:username "amelia.fr8"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#FacebookAccountFadhilah
+untitled-ontology-4:FacebookAccountFadhilah rdf:type owl:NamedIndividual ,
+                                                     untitled-ontology-4:FacebookAccount ;
+                                            untitled-ontology-4:accountOf untitled-ontology-4:Facebook ;
+                                            untitled-ontology-4:follows untitled-ontology-4:FacebookAccountNovita ;
+                                            untitled-ontology-4:friends_followers 325 ;
+                                            untitled-ontology-4:social_media_account_id 011 ;
+                                            untitled-ontology-4:username "fadhilah.muhammad.18"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#FacebookAccountNovita
+untitled-ontology-4:FacebookAccountNovita rdf:type owl:NamedIndividual ,
+                                                   untitled-ontology-4:FacebookAccount ;
+                                          untitled-ontology-4:accountOf untitled-ontology-4:Facebook ;
+                                          untitled-ontology-4:follows untitled-ontology-4:FacebookAccountFadhilah ;
+                                          untitled-ontology-4:friends_followers 680 ;
+                                          untitled-ontology-4:social_media_account_id 012 ;
+                                          untitled-ontology-4:username "ovie.ritonga"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#FacebookAccountRigel
+untitled-ontology-4:FacebookAccountRigel rdf:type owl:NamedIndividual ,
+                                                  untitled-ontology-4:FacebookAccount ;
+                                         untitled-ontology-4:accountOf untitled-ontology-4:Facebook ;
+                                         untitled-ontology-4:follows untitled-ontology-4:FacebookAccountAmelia ;
+                                         untitled-ontology-4:friends_followers 1460 ;
+                                         untitled-ontology-4:social_media_account_id 013 ;
+                                         untitled-ontology-4:username "rigel.ardana"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#FadhilahMuhammad
+untitled-ontology-4:FadhilahMuhammad rdf:type owl:NamedIndividual ,
+                                              untitled-ontology-4:Person ;
+                                     untitled-ontology-4:has untitled-ontology-4:FacebookAccountFadhilah ,
+                                                             untitled-ontology-4:InstagramAccountFadhilah ,
+                                                             untitled-ontology-4:TwitterAccountFadhilah ;
+                                     untitled-ontology-4:first_name "Fadhilah"^^xsd:string ;
+                                     untitled-ontology-4:last_name "Muhammad"^^xsd:string ;
+                                     untitled-ontology-4:person_id 001 ;
+                                     untitled-ontology-4:status "In a Relationship"^^xsd:string ;
+                                     untitled-ontology-4:university "Universitas Padjadjaran"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#Instagram
+untitled-ontology-4:Instagram rdf:type owl:NamedIndividual ,
+                                       untitled-ontology-4:SocialMedia ;
+                              untitled-ontology-4:name "Instagram"^^xsd:string ;
+                              untitled-ontology-4:social_media_id 020 .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#InstagramAccountAmelia
+untitled-ontology-4:InstagramAccountAmelia rdf:type owl:NamedIndividual ,
+                                                    untitled-ontology-4:InstagramAccount ;
+                                           untitled-ontology-4:accountOf untitled-ontology-4:Instagram ;
+                                           untitled-ontology-4:follows untitled-ontology-4:InstagramAccountRigel ;
+                                           untitled-ontology-4:friends_followers 1092 ;
+                                           untitled-ontology-4:social_media_account_id 024 ;
+                                           untitled-ontology-4:username "ameliafr"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#InstagramAccountFadhilah
+untitled-ontology-4:InstagramAccountFadhilah rdf:type owl:NamedIndividual ,
+                                                      untitled-ontology-4:InstagramAccount ;
+                                             untitled-ontology-4:accountOf untitled-ontology-4:Instagram ;
+                                             untitled-ontology-4:follows untitled-ontology-4:InstagramAccountNovita ;
+                                             untitled-ontology-4:friends_followers 1330 ;
+                                             untitled-ontology-4:social_media_account_id 021 ;
+                                             untitled-ontology-4:username "fadhilahmhmmd"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#InstagramAccountNovita
+untitled-ontology-4:InstagramAccountNovita rdf:type owl:NamedIndividual ,
+                                                    untitled-ontology-4:InstagramAccount ;
+                                           untitled-ontology-4:accountOf untitled-ontology-4:Instagram ;
+                                           untitled-ontology-4:follows untitled-ontology-4:InstagramAccountFadhilah ;
+                                           untitled-ontology-4:friends_followers 397 ;
+                                           untitled-ontology-4:social_media_account_id 022 ;
+                                           untitled-ontology-4:username "novrtg"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#InstagramAccountRigel
+untitled-ontology-4:InstagramAccountRigel rdf:type owl:NamedIndividual ,
+                                                   untitled-ontology-4:InstagramAccount ;
+                                          untitled-ontology-4:accountOf untitled-ontology-4:Instagram ;
+                                          untitled-ontology-4:follows untitled-ontology-4:InstagramAccountAmelia ;
+                                          untitled-ontology-4:friends_followers 932 ;
+                                          untitled-ontology-4:social_media_account_id 023 ;
+                                          untitled-ontology-4:username "rigelardanaa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#NovitaRitonga
+untitled-ontology-4:NovitaRitonga rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-4:Person ;
+                                  untitled-ontology-4:has untitled-ontology-4:FacebookAccountNovita ,
+                                                          untitled-ontology-4:InstagramAccountNovita ,
+                                                          untitled-ontology-4:TwitterAccountNovita ;
+                                  untitled-ontology-4:first_name "Novita"^^xsd:string ;
+                                  untitled-ontology-4:last_name "Ritonga"^^xsd:string ;
+                                  untitled-ontology-4:person_id 002 ;
+                                  untitled-ontology-4:status "Single"^^xsd:string ;
+                                  untitled-ontology-4:university "Universitas Diponegoro"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#RigelArdana
+untitled-ontology-4:RigelArdana rdf:type owl:NamedIndividual ,
+                                         untitled-ontology-4:Person ;
+                                untitled-ontology-4:has untitled-ontology-4:FacebookAccountRigel ,
+                                                        untitled-ontology-4:InstagramAccountRigel ;
+                                untitled-ontology-4:first_name "Rigel"^^xsd:string ;
+                                untitled-ontology-4:last_name "Ardana"^^xsd:string ;
+                                untitled-ontology-4:person_id 003 ;
+                                untitled-ontology-4:status "Single"^^xsd:string ;
+                                untitled-ontology-4:university "Sekolah Tinggi Akutansi Negara"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#Twitter
+untitled-ontology-4:Twitter rdf:type owl:NamedIndividual ,
+                                     untitled-ontology-4:SocialMedia ;
+                            untitled-ontology-4:name "Twitter"^^xsd:string ;
+                            untitled-ontology-4:social_media_id 030 .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#TwitterAccountFadhilah
+untitled-ontology-4:TwitterAccountFadhilah rdf:type owl:NamedIndividual ,
+                                                    untitled-ontology-4:TwitterAccount ;
+                                           untitled-ontology-4:accountOf untitled-ontology-4:Twitter ;
+                                           untitled-ontology-4:follows untitled-ontology-4:TwitterAccountNovita ;
+                                           untitled-ontology-4:friends_followers 468 ;
+                                           untitled-ontology-4:social_media_account_id 031 ;
+                                           untitled-ontology-4:username "fadhilahmuhamad"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/3/untitled-ontology-4#TwitterAccountNovita
+untitled-ontology-4:TwitterAccountNovita rdf:type owl:NamedIndividual ,
+                                                  untitled-ontology-4:TwitterAccount ;
+                                         untitled-ontology-4:accountOf untitled-ontology-4:Twitter ;
+                                         untitled-ontology-4:follows untitled-ontology-4:TwitterAccountFadhilah ;
+                                         untitled-ontology-4:friends_followers 134 ;
+                                         untitled-ontology-4:social_media_account_id 032 ;
+                                         untitled-ontology-4:username "ibukosmu"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,80 @@
+# Prefixes
+@prefix ab: <http://learningsparql.com/ns/addressbook#> .
+@prefix d:  <http://learningsparql.com/ns/data#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix fb : <https://facebook.com/>.
+@prefix ig : <https://www.instagram.com/>.
+@prefix twt : <https://twitter.com/>.
+
+# Property
+ab:usesSocialMedia
+	rdf:type rdf:Property;
+	rdfs:comment "Identifies the Social Media that someone uses";
+	rdfs:label "uses Social Media";
+	rdfs:domain ab:SocialMediaUser;
+	rdfs:range ab:SocialMedia.
+
+# Social Media
+d:sm001
+	ab:name "FaceBook".
+
+d:sm002
+	ab:name "Instagram".
+
+d:sm003
+	ab:name "Twitter".
+
+d:sm004
+	ab:name "Line".
+
+# Person
+d:001
+	ab:firstName "Fadhilah" ;
+	ab:lastName "Muhammad";
+	ab:status "In a relationship";
+	ab:university "Universitas Padjadjaran";
+	ab:usesSocialMedia d:sm001, d:sm002, d:sm003, d:sm004;
+	ab:fbUserName fb:fadhilah.muhammad.18;
+	ab:igUserName ig:fadhilahmhmmd;
+	ab:twtUserName twt:fadhilahmuhamad;
+	ab:fbFriends d:002;
+	ab:igFollowers d:002;
+	ab:twtFollowers d:002.
+
+d:002
+	ab:firstName "Novita";
+	ab:lastName "Ritonga";
+	ab:status "Single";
+	ab:university "Universitas Diponegoro";
+	ab:usesSocialMedia d:sm001, d:sm002, d:sm003, d:sm004;
+	ab:fbUserName fb:ovie.ritonga;
+	ab:igUserName ig:novrtg;
+	ab:twtUserName twt:ibukosmu;
+	ab:fbFriends d:001;
+	ab:igFollowers d:001;
+	ab:twtFollowers d:001.
+
+d:003
+	ab:firstName "Rigel";
+	ab:lastName "Ardana";
+	ab:status "Single";
+	ab:university "Sekolah Tinggi Akuntansi Negara";
+	ab:usesSocialMedia d:sm001, d:sm002, d:sm003;
+	ab:fbUserName fb:rigel.ardana;
+	ab:igUserName ig:rigelardanaa;
+	ab:twtUserName twt:Rigel20;
+	ab:fbFriends d:003;
+	ab:igFollowers d:003.
+
+d:004
+	ab:firstName "Amalia";
+	ab:lastName "Rachmah";
+	ab:status "Single";
+	ab:university "Institut Teknologi Bandung";
+	ab:usesSocialMedia d:sm001, d:sm002;
+	ab:fbUserName fb:amalia.fr8;
+	ab:igUserName ig:amalia.fr;
+	ab:fbFriends d:004;
+	ab:igFollowers d:004.
