@@ -1,0 +1,287 @@
+@prefix : <http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16> .
+
+<http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#assist
+:assist rdf:type owl:ObjectProperty ;
+        rdfs:domain :Staff ;
+        rdfs:range :Position .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#hasJob
+:hasJob rdf:type owl:ObjectProperty ;
+        rdfs:domain :Staff ;
+        rdfs:range :Jobs .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#hasPosition
+:hasPosition rdf:type owl:ObjectProperty ;
+             rdfs:domain :Staff ;
+             rdfs:range :Position .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#lead
+:lead rdf:type owl:ObjectProperty ;
+      rdfs:domain :Position ;
+      rdfs:range :Organization .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#studies
+:studies rdf:type owl:ObjectProperty ;
+         rdfs:domain :Student ;
+         rdfs:range :Course .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#supervise
+:supervise rdf:type owl:ObjectProperty ;
+           rdfs:domain :Staff ;
+           rdfs:range :Student .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#supervisedBy
+:supervisedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Student ;
+              rdfs:range :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#teaches
+:teaches rdf:type owl:ObjectProperty ;
+         rdfs:domain :Staff ;
+         rdfs:range :Course .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#name
+:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Course
+:Course rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Dean
+:Dean rdf:type owl:Class ;
+      rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Department
+:Department rdf:type owl:Class ;
+            rdfs:subClassOf :Organization .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#DepartmentLeader
+:DepartmentLeader rdf:type owl:Class ;
+                  rdfs:subClassOf :Position .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Faculty
+:Faculty rdf:type owl:Class ;
+         rdfs:subClassOf :Organization .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#FacultyLeader
+:FacultyLeader rdf:type owl:Class ;
+               rdfs:subClassOf :Position .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#HeadOfDepartment
+:HeadOfDepartment rdf:type owl:Class ;
+                  rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#HeadOfStudyProgram
+:HeadOfStudyProgram rdf:type owl:Class ;
+                    rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Jobs
+:Jobs rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Organization
+:Organization rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Position
+:Position rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Rector
+:Rector rdf:type owl:Class ;
+        rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Staff
+:Staff rdf:type owl:Class ;
+       rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Student
+:Student rdf:type owl:Class ;
+         rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#StudyProgram
+:StudyProgram rdf:type owl:Class ;
+              rdfs:subClassOf :Organization .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#StudyProgramLeader
+:StudyProgramLeader rdf:type owl:Class ;
+                    rdfs:subClassOf :Position .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#University
+:University rdf:type owl:Class ;
+            rdfs:subClassOf :Organization .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#UniversityLeader
+:UniversityLeader rdf:type owl:Class ;
+                  rdfs:subClassOf :Position .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#ViceOfDean
+:ViceOfDean rdf:type owl:Class ;
+            rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#ViceOfRector
+:ViceOfRector rdf:type owl:Class ;
+              rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#ViceOfRector1
+:ViceOfRector1 rdf:type owl:Class ;
+               rdfs:subClassOf :ViceOfRector .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#ViceOfRector2
+:ViceOfRector2 rdf:type owl:Class ;
+               rdfs:subClassOf :ViceOfRector .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#ViceOfRector3
+:ViceOfRector3 rdf:type owl:Class ;
+               rdfs:subClassOf :ViceOfRector .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#ViceOfRector4
+:ViceOfRector4 rdf:type owl:Class ;
+               rdfs:subClassOf :ViceOfRector .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#DatabaseSystem
+:DatabaseSystem rdf:type owl:NamedIndividual ,
+                         :Course .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#FMIPA
+:FMIPA rdf:type owl:NamedIndividual ,
+                :Faculty .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#FacultyLeader
+:FacultyLeader rdf:type owl:NamedIndividual ,
+                        :FacultyLeader ;
+               :lead :FMIPA .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#HumanComputerInteraction
+:HumanComputerInteraction rdf:type owl:NamedIndividual ,
+                                   :Course .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#IbnuAhsani
+:IbnuAhsani rdf:type owl:NamedIndividual ,
+                     :Student ;
+            :studies :HumanComputerInteraction ,
+                     :WebSemantics .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#Informatics
+:Informatics rdf:type owl:NamedIndividual ,
+                      :StudyProgram .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#PakAdityaPradhana
+:PakAdityaPradhana rdf:type owl:NamedIndividual ,
+                            :Staff ;
+                   :teaches :WebSemantics .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#PakErickPaulus
+:PakErickPaulus rdf:type owl:NamedIndividual ,
+                         :Staff ;
+                :supervise :IbnuAhsani ;
+                :teaches :HumanComputerInteraction .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#PakJuliRejito
+:PakJuliRejito rdf:type owl:NamedIndividual ,
+                        :HeadOfStudyProgram ;
+               :hasPosition :StudyProgramLeader ;
+               :teaches :DatabaseSystem .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#PakSudrajat
+:PakSudrajat rdf:type owl:NamedIndividual ,
+                      :Dean ;
+             :hasPosition :FacultyLeader .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#PakTriHanggonoAchmad
+:PakTriHanggonoAchmad rdf:type owl:NamedIndividual ,
+                               :Rector ;
+                      :hasPosition :UniversityLeader .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#StudyProgramLeader
+:StudyProgramLeader rdf:type owl:NamedIndividual ,
+                             :StudyProgramLeader ;
+                    :lead :Informatics .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#UniversitasPadjadjaran
+:UniversitasPadjadjaran rdf:type owl:NamedIndividual ,
+                                 :University .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#UniversityLeader
+:UniversityLeader rdf:type owl:NamedIndividual ,
+                           :UniversityLeader ;
+                  :lead :UniversitasPadjadjaran .
+
+
+###  http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#WebSemantics
+:WebSemantics rdf:type owl:NamedIndividual ,
+                       :Course ;
+              :name "WebSemantics"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

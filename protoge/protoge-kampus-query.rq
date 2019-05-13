@@ -1,0 +1,58 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://www.semanticweb.org/sentinel/ontologies/2019/4/untitled-ontology-16#>
+
+# Get all students
+SELECT ?students
+  WHERE { ?students rdf:type :Student } 
+
+# Get all students and the courses that they take
+SELECT ?students ?courses
+  WHERE { 
+    ?students rdf:type :Student.
+    ?students :studies ?courses.
+  } 
+
+# Get all lectors and the courses that they teach
+SELECT ?courses ?lectors
+  WHERE { 
+    ?lectors rdf:type :Staff.
+    ?lectors :teaches ?courses.
+  } 
+
+# Get all students and their supervisors
+SELECT ?students ?supervisors
+  WHERE { ?supervisors :supervise ?students. }
+
+# Get all lectors who teaches Web Semantics
+SELECT ?lectors
+  WHERE { 
+    ?lectors :teaches ?course .
+    ?course :name "WebSemantics"^^xsd:string. 
+  }
+
+# Get all rectors and their university
+SELECT ?rector ?university
+  WHERE { 
+    ?rector :hasPosition ?universityLeader.
+    ?universityLeader rdf:type :UniversityLeader.
+    ?universityLeader :lead ?university. 
+  }
+
+# Get all deans and their faculty
+SELECT ?dean ?faculty
+  WHERE {
+    ?dean :hasPosition ?facultyLeader.
+    ?facultyLeader rdf:type :FacultyLeader.
+    ?facultyLeader :lead ?faculty
+  }
+
+# Get all study program head and their study program
+SELECT ?studyProgramHead ?studyProgram
+  WHERE {
+    ?studyProgramHead :hasPosition ?studyProgramLeader.
+    ?studyProgramLeader rdf:type :StudyProgramLeader.
+    ?studyProgramLeader :lead ?studyProgram
+  }
